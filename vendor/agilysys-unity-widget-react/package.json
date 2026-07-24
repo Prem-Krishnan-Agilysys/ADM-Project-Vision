@@ -1,0 +1,25 @@
+{
+  "name": "agilysys-unity-widget-react",
+  "version": "1.0.39",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./dist/agilysys-unity-widget-react.css": "./dist/agilysys-unity-widget-react.css",
+    "./theme/scss": "./dist/scss/_index.scss",
+    "./theme/scss/*": "./dist/scss/*"
+  },
+  "sideEffects": false,
+  "dependencies": {},
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0"
+  }
+}
