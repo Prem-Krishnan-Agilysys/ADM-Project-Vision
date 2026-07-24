@@ -1278,19 +1278,19 @@ function StepBasics({ form, set }: { form: FormState; set: (p: Partial<FormState
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
           <div>
             <Label required>Email Subject</Label>
-            <TextInput value={form.subject} onValueChange={v => set({ subject: v, name: v })} placeholder="Summer Pre-Arrival Welcome" size="normal" />
+            <TextInput value={form.subject} onValueChange={(v: string) => set({ subject: v, name: v })} placeholder="Summer Pre-Arrival Welcome" size="normal" />
           </div>
           <div>
             <Label required>From Name</Label>
-            <TextInput value={form.fromName} onValueChange={v => set({ fromName: v })} placeholder="Alpine Resorts" size="normal" />
+            <TextInput value={form.fromName} onValueChange={(v: string) => set({ fromName: v })} placeholder="Alpine Resorts" size="normal" />
           </div>
           <div>
             <Label required>Preview Text</Label>
-            <TextInput value={form.previewText} onValueChange={v => set({ previewText: v })} placeholder="Snippet will appear in the inbox after subject line" size="normal" />
+            <TextInput value={form.previewText} onValueChange={(v: string) => set({ previewText: v })} placeholder="Snippet will appear in the inbox after subject line" size="normal" />
           </div>
           <div>
             <Label required>From Email</Label>
-            <TextInput value={form.senderEmail} onValueChange={v => set({ senderEmail: v, replyToEmail: form.replyToEmail || v })} placeholder="Alpineresorts@gmail.com" size="normal" />
+            <TextInput value={form.senderEmail} onValueChange={(v: string) => set({ senderEmail: v, replyToEmail: form.replyToEmail || v })} placeholder="Alpineresorts@gmail.com" size="normal" />
           </div>
         </div>
 
@@ -1320,11 +1320,11 @@ function StepBasics({ form, set }: { form: FormState; set: (p: Partial<FormState
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10 }}>
                   <div>
                     <Label required>Reply to Email</Label>
-                    <TextInput value={form.replyToEmail} onValueChange={v => set({ replyToEmail: v })} placeholder="reply@alpineresorts.com" size="normal" />
+                    <TextInput value={form.replyToEmail} onValueChange={(v: string) => set({ replyToEmail: v })} placeholder="reply@alpineresorts.com" size="normal" />
                   </div>
                   <div>
                     <Label>Response Owner</Label>
-                    <TextInput value={form.fromName} onValueChange={v => set({ fromName: v })} placeholder="Campaign Team" size="normal" />
+                    <TextInput value={form.fromName} onValueChange={(v: string) => set({ fromName: v })} placeholder="Campaign Team" size="normal" />
                   </div>
                 </div>
                 <div style={{ marginTop: 8, display: 'flex', flexDirection: 'column', gap: 6 }}>
@@ -3716,7 +3716,7 @@ export function CreateCampaignFlowInline({
             activeStep={step}
             direction="horizontal"
             size="small"
-            onStepClick={i => { if (i < step) setStep(i) }}
+            onStepClick={(i: number) => { if (i < step) setStep(i) }}
           />
         </div>
       )}
@@ -4042,7 +4042,7 @@ export default function CreateCampaignFlow({ open, onClose, onLaunch, onSave }: 
             activeStep={step}
             direction="horizontal"
             size="small"
-            onStepClick={i => { if (i < step) setStep(i) }}
+            onStepClick={(i: number) => { if (i < step) setStep(i) }}
           />
         </div>
 
